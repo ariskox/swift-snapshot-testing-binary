@@ -1,0 +1,6 @@
+version: 1.19.6-8byte.1
+ref: perf/byte-diff-2-uint64-words (69029f0)
+xcode: Xcode 27.1 Build version 27A9275 
+swift: swift-driver version: 1.168.6 Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+asset: SnapshotTesting-1.19.6-8byte.1.xcframework.zip
+checksum: 85a7ad300512dea197c6d8e958515c612819b1de806bfb0890105e1cee334d18

@@ -1,0 +1,7 @@
+.build/
+.build-xcframework/
+.swiftpm/
+Example/.build/
+Example/.swiftpm/
+SnapshotTesting.xcframework/
+*.xcframework.zip

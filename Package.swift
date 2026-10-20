@@ -9,11 +9,11 @@ let package = Package(
     .library(name: "SnapshotTesting", targets: ["SnapshotTesting"])
   ],
   targets: [
-    // 1.19.6-8byte.1: Release build of perf/byte-diff-2-uint64-words, made by Scripts/build-xcframework.sh.
+    // 1.19.6-rawptr.1: Release build of perf/byte-diff-1-raw-pointers, made by Scripts/build-xcframework.sh.
     .binaryTarget(
       name: "SnapshotTesting",
-      url: "https://github.com/ariskox/swift-snapshot-testing-binary/releases/download/1.19.6-8byte.1/SnapshotTesting-1.19.6-8byte.1.xcframework.zip",
-      checksum: "85a7ad300512dea197c6d8e958515c612819b1de806bfb0890105e1cee334d18"
+      url: "https://github.com/ariskox/swift-snapshot-testing-binary/releases/download/1.19.6-rawptr.1/SnapshotTesting-1.19.6-rawptr.1.xcframework.zip",
+      checksum: "23901ad9d1463866021e5280c4dd1f1bacb2868ff70b940311c62bd6679efd03"
     )
   ]
 )

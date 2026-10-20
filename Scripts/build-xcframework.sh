@@ -30,9 +30,17 @@ rm -rf $WORK
 mkdir -p $WORK/src
 git -C $SOURCE archive $REF | tar -x -C $WORK/src
 
-# Build-only manifest: just the SnapshotTesting library, as a dynamic framework.
+# Build-only manifest: just the SnapshotTesting library, as a dynamic framework, plus the NEON C
+# target on branches that have it (it's linked into the framework).
 rm -f $WORK/src/Package@swift-*.swift $WORK/src/Package.resolved
-cat > $WORK/src/Package.swift <<'EOF'
+if [[ -d $WORK/src/Sources/SnapshotTestingByteDiff ]]; then
+  c_dependencies='dependencies: ["SnapshotTestingByteDiff"]'
+  c_target='.target(name: "SnapshotTestingByteDiff"),'
+else
+  c_dependencies='dependencies: []'
+  c_target=''
+fi
+cat > $WORK/src/Package.swift <<EOF
 // swift-tools-version:6.0
 
 import PackageDescription
@@ -44,7 +52,8 @@ let package = Package(
     .library(name: "SnapshotTesting", type: .dynamic, targets: ["SnapshotTesting"])
   ],
   targets: [
-    .target(name: "SnapshotTesting")
+    .target(name: "SnapshotTesting", $c_dependencies),
+    $c_target
   ],
   swiftLanguageModes: [.v5]
 )

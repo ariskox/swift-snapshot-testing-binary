@@ -18,7 +18,7 @@ differing bytes.
 |---|---|---|---|
 | **8byte** | `1.19.6-8byte.1` | `perf/byte-diff-2-uint64-words` | Compares 8 bytes per step, in Swift |
 | rawptr | `1.19.6-rawptr.1` | `perf/byte-diff-1-raw-pointers` | Reads buffers through raw pointers |
-| neon | *not released yet* | `perf/byte-diff-3-neon` | NEON vector instructions on arm64 |
+| neon | `1.19.6-neon.1` | `perf/byte-diff-3-neon` | NEON vector instructions on arm64 |
 
 Full image diff (`Diffing.image(precision: 0.99)`, 1179×2556 image) from a Debug test target, median
 of 10 runs:

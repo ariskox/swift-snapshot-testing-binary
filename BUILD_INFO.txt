@@ -1,6 +1,6 @@
-version: 1.19.6-rawptr.1
-ref: perf/byte-diff-1-raw-pointers (47460fd)
+version: 1.19.6-neon.1
+ref: perf/byte-diff-3-neon (5684d2f)
 xcode: Xcode 27.1 Build version 27A9275 
 swift: swift-driver version: 1.168.6 Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
-asset: SnapshotTesting-1.19.6-rawptr.1.xcframework.zip
-checksum: 23901ad9d1463866021e5280c4dd1f1bacb2868ff70b940311c62bd6679efd03
+asset: SnapshotTesting-1.19.6-neon.1.xcframework.zip
+checksum: 56dded01558a00f7f5ad70cb1a31142aee12da88856a7309cb1e64ad0fc3e18c

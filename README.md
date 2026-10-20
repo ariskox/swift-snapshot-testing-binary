@@ -27,7 +27,13 @@ of 10 runs:
 |---|---|---|
 | Upstream 1.19.6 from source | 116.8 ms | 54.9 ms |
 | 8byte branch from source | 40.1 ms | 31.2 ms |
-| **8byte binary (this package)** | **15.2 ms** | **21.7 ms** |
+| **rawptr binary** (`1.19.6-rawptr.1`) | **18.4 ms** | **24.8 ms** |
+| **8byte binary** (`1.19.6-8byte.1`) | **15.7 ms** | **22.5 ms** |
+| **neon binary** (`1.19.6-neon.1`) | **15.9 ms** | **22.5 ms** |
+
+As Release builds, the three variants are within a few milliseconds of each other: with
+optimization on, the compiler vectorizes even the simple raw-pointer loop. Most of the gain comes
+from the binary being optimized at all.
 
 The binary links into Debug test targets: its code stays optimized while your tests stay
 debuggable.

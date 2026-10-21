@@ -3,19 +3,21 @@
 Precompiled, Release-mode builds of `SnapshotTesting` with faster image comparison, shipped as a
 Swift package with a binary target, for iOS (device and simulator) and macOS.
 
-**This is an unofficial build** of a modified fork
-([ariskox/swift-snapshot-testing](https://github.com/ariskox/swift-snapshot-testing)) of
-[pointfreeco/swift-snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing). It
-isn't made or supported by Point-Free. The original code is MIT-licensed; see [LICENSE](LICENSE).
+**These are unofficial builds** of
+[pointfreeco/swift-snapshot-testing](https://github.com/pointfreeco/swift-snapshot-testing), either
+unmodified or from a modified fork
+([ariskox/swift-snapshot-testing](https://github.com/ariskox/swift-snapshot-testing)). They aren't
+made or supported by Point-Free. The original code is MIT-licensed; see [LICENSE](LICENSE).
 
 ## Variants
 
 Each release tag is `<upstream version>-<variant>.<build>`. Every variant has the same public API
-as upstream `SnapshotTesting`; they differ only in how image comparisons with `precision < 1` count
-differing bytes.
+as upstream `SnapshotTesting`. The `upstream` variant is the unmodified code; the others differ only
+in how image comparisons with `precision < 1` count differing bytes.
 
-| Variant | Tag | Fork branch | Technique |
+| Variant | Tag | Source | Technique |
 |---|---|---|---|
+| upstream | `1.19.6-upstream.1` | upstream tag `1.19.6` | Unmodified code, compiled in Release |
 | **8byte** | `1.19.6-8byte.1` | `perf/byte-diff-2-uint64-words` | Compares 8 bytes per step, in Swift |
 | rawptr | `1.19.6-rawptr.1` | `perf/byte-diff-1-raw-pointers` | Reads buffers through raw pointers |
 | neon | `1.19.6-neon.1` | `perf/byte-diff-3-neon` | NEON vector instructions on arm64 |

@@ -9,11 +9,11 @@ let package = Package(
     .library(name: "SnapshotTesting", targets: ["SnapshotTesting"])
   ],
   targets: [
-    // 1.19.6-neon.1: Release build of perf/byte-diff-3-neon, made by Scripts/build-xcframework.sh.
+    // 1.19.6-upstream.1: Release build of 1.19.6, made by Scripts/build-xcframework.sh.
     .binaryTarget(
       name: "SnapshotTesting",
-      url: "https://github.com/ariskox/swift-snapshot-testing-binary/releases/download/1.19.6-neon.1/SnapshotTesting-1.19.6-neon.1.xcframework.zip",
-      checksum: "56dded01558a00f7f5ad70cb1a31142aee12da88856a7309cb1e64ad0fc3e18c"
+      url: "https://github.com/ariskox/swift-snapshot-testing-binary/releases/download/1.19.6-upstream.1/SnapshotTesting-1.19.6-upstream.1.xcframework.zip",
+      checksum: "5e7c941215b65a52a3a1311e5e8a4370d5983a2abaa79414381f58e711cb0a53"
     )
   ]
 )

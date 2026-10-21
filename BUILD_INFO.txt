@@ -1,6 +1,6 @@
-version: 1.19.6-neon.1
-ref: perf/byte-diff-3-neon (5684d2f)
+version: 1.19.6-upstream.1
+ref: 1.19.6 (28e5de0)
 xcode: Xcode 27.1 Build version 27A9275 
 swift: swift-driver version: 1.168.6 Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
-asset: SnapshotTesting-1.19.6-neon.1.xcframework.zip
-checksum: 56dded01558a00f7f5ad70cb1a31142aee12da88856a7309cb1e64ad0fc3e18c
+asset: SnapshotTesting-1.19.6-upstream.1.xcframework.zip
+checksum: 5e7c941215b65a52a3a1311e5e8a4370d5983a2abaa79414381f58e711cb0a53
